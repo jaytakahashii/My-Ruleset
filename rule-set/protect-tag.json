@@ -1,0 +1,33 @@
+{
+  "id": 3029780,
+  "name": "protect-tag",
+  "target": "tag",
+  "source_type": "Repository",
+  "source": "jayjayjay-hub/42_CPP00",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "~ALL"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "type": "required_status_checks",
+      "parameters": {
+        "strict_required_status_checks_policy": false,
+        "do_not_enforce_on_create": false,
+        "required_status_checks": []
+      }
+    }
+  ],
+  "bypass_actors": []
+}
