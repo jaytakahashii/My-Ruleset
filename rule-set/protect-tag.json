@@ -3,7 +3,7 @@
   "name": "protect-tag",
   "target": "tag",
   "source_type": "Repository",
-  "source": "jayjayjay-hub/42_CPP00",
+  "source": "jaytakahashii/42_CPP00",
   "enforcement": "active",
   "conditions": {
     "ref_name": {
