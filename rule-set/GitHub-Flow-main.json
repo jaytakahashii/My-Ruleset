@@ -1,14 +1,16 @@
 {
-  "id": 10596304,
+  "id": 12220835,
   "name": "protect-main",
   "target": "branch",
   "source_type": "Repository",
-  "source": "jaytakahashii/42_Leaffliction",
+  "source": "jaytakahashii/Matcha",
   "enforcement": "active",
   "conditions": {
     "ref_name": {
       "exclude": [],
-      "include": ["~DEFAULT_BRANCH"]
+      "include": [
+        "~DEFAULT_BRANCH"
+      ]
     }
   },
   "rules": [
@@ -33,8 +35,9 @@
         "require_code_owner_review": false,
         "require_last_push_approval": false,
         "required_review_thread_resolution": true,
-        "automatic_copilot_code_review_enabled": false,
-        "allowed_merge_methods": ["squash"]
+        "allowed_merge_methods": [
+          "squash"
+        ]
       }
     },
     {
@@ -44,7 +47,11 @@
         "do_not_enforce_on_create": false,
         "required_status_checks": [
           {
-            "context": "check-source-branch",
+            "context": "backend-lint",
+            "integration_id": 15368
+          },
+          {
+            "context": "frontend-lint",
             "integration_id": 15368
           }
         ]

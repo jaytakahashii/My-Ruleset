@@ -1,5 +1,5 @@
 {
-  "id": 10574457,
+  "id": 10596313,
   "name": "protect-dev",
   "target": "branch",
   "source_type": "Repository",
@@ -33,6 +33,19 @@
         "allowed_merge_methods": [
           "rebase",
           "merge"
+        ]
+      }
+    },
+    {
+      "type": "required_status_checks",
+      "parameters": {
+        "strict_required_status_checks_policy": true,
+        "do_not_enforce_on_create": false,
+        "required_status_checks": [
+          {
+            "context": "static-check (3.14)",
+            "integration_id": 15368
+          }
         ]
       }
     }
